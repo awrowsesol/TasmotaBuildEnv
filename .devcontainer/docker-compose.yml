@@ -1,0 +1,13 @@
+services:
+  docker-tasmota:
+    build:
+      context: ../docker-tasmota
+      dockerfile: Dockerfile
+    image: docker-tasmota
+    entrypoint: []
+    extra_hosts:
+      - 'host.docker.internal:host-gateway'
+    volumes:
+      - "..:/workspace:cached"
+      - "../tasmota:/tasmota:cached"
+      - "../src/user_config_override.h:/tasmota/tasmota/user_config_override.h:cached"

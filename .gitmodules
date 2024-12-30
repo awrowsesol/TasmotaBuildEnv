@@ -1,0 +1,6 @@
+[submodule "tasmota"]
+	path = tasmota
+	url = https://github.com/arendst/Tasmota.git
+[submodule "docker-tasmota"]
+	path = docker-tasmota
+	url = https://github.com/tasmota/docker-tasmota
